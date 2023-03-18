@@ -1,6 +1,6 @@
 # acme.sh
 How To Automate SSL With Docker And NGINX
-#Install
+# Install
 curl  https://get.acme.sh | sh
 alias acme.sh=~/.acme.sh/acme.sh
 acme.sh --set-default-ca  --server  letsencrypt
