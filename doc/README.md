@@ -88,6 +88,6 @@ cloudflare为cdn加速
 nginx代理x-ui面板； nginx代理xray服务，
 
 用户请求域名，实际请求流程为：  
-test.gopron.online->cdn(443)->nginx(443)->xray(127.0.0.1:2906)  
-test.gopron.online->cdn(443)->nginx(443)->x-ui(127.0.0.1:8443)
+test.xxx.com->cdn(443)->nginx(443)->xray(127.0.0.1:2906)  
+test.xxx.com->cdn(443)->nginx(443)->x-ui(127.0.0.1:8443)
 
