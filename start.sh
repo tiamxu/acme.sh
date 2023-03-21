@@ -1,5 +1,5 @@
 #!/bin/bash
- docker run -itd  -p 80:80 -p 443:443 --name nginx \
+ docker run -itd  --network=host --name nginx \
 	 -v /etc/localtime:/etc/localtime \
 	 -v /mnt/nginx/.acme.sh:/root/.acme.sh \
 	 -v /mnt/nginx/config/conf.d:/etc/nginx/conf.d \

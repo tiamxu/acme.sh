@@ -62,7 +62,7 @@ sudo apt-get -y update
 sudo apt-get -y install docker-ce
 ```
 # nginx
-容器起的nginx 代理一直报502，yum安装的没问题。
+使用容器安装或者yum/apt安装
 ```
 apt install nginx -y
 ```
