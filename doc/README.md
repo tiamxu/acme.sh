@@ -95,3 +95,5 @@ nginx代理x-ui面板； nginx代理xray服务，
 test.gopron.online->cdn(443)->nginx(443)->xray(127.0.0.1:2906)  
 test.gopron.online->cdn(443)->nginx(443)->x-ui(127.0.0.1:8443)
 
+#x-ui重置密码
+./x-ui setting -username admin -password admin
