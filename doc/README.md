@@ -99,7 +99,7 @@ test.gopron.online->cdn(443)->nginx(443)->x-ui(127.0.0.1:8443)
 ./x-ui setting -username admin -password admin
 
 # Ubuntu系统
-`
+```
 apt-get update
 apt install -y vim
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
@@ -108,9 +108,14 @@ sudo add-apt-repository "deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/l
 sudo apt-get -y install docker-ce
 systemctl start docker
 systemctl enable docker
-`
+```
 # 注意事项
+```
 升级后: 为啥升级后，报错用不了呀Failed to start: main: failed to load config files: [bin/config.json] > infra/conf: VLESS clients: "flow" doesn't support "xtls-rprx-direct" in this version 
+```
+
 解决方案: 
 xray版本1.7.5
-`https://github.com/XTLS/Xray-core/issues/1764`
+```
+https://github.com/XTLS/Xray-core/issues/1764
+```
