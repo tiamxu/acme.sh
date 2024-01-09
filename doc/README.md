@@ -95,5 +95,22 @@ nginx代理x-ui面板； nginx代理xray服务，
 test.gopron.online->cdn(443)->nginx(443)->xray(127.0.0.1:2906)  
 test.gopron.online->cdn(443)->nginx(443)->x-ui(127.0.0.1:8443)
 
-#x-ui重置密码
+# x-ui重置密码
 ./x-ui setting -username admin -password admin
+
+# Ubuntu系统
+`
+apt-get update
+apt install -y vim
+sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get -y install docker-ce
+systemctl start docker
+systemctl enable docker
+`
+# 注意事项
+升级后: 为啥升级后，报错用不了呀Failed to start: main: failed to load config files: [bin/config.json] > infra/conf: VLESS clients: "flow" doesn't support "xtls-rprx-direct" in this version 
+解决方案: 
+xray版本1.7.5
+`https://github.com/XTLS/Xray-core/issues/1764`
