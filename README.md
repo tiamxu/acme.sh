@@ -57,3 +57,14 @@ dig TXT _acme-challenge.gopron.cn
 ./acme.sh --issue --dns dns_acmedns -d gopron.cn -d *.gopron.cn --server letsencrypt --use-wget --days 90 -k 2048
 ```
 注：申请泛域名证书需要指定两个domain：domain.com 和*.domain.com
+
+
+# 使用方法
+```
+1、申请acme-dns账户
+register.sh
+2、申请证书
+template.cn.sh
+3、监控
+acme_alert.sh
+```
