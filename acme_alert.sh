@@ -46,8 +46,9 @@ for domain in ${domain_list[@]} ;do
     else
       msg="通知告警:${domain}域名ssl证书即将过期，已续签成功，剩余时间：${remain_day}天"
       #这里写需要执行的操作
-      [ -f /usr/share/nginx/downloads/${domain}.tar.gz ] && rm -f /usr/share/nginx/downloads/${domain}.tar.gz
-      tar czf /usr/share/nginx/downloads/${domain}.tar.gz ./${domain}
+      #[ -f /usr/share/nginx/downloads/${domain}.tar.gz ] && rm -f /usr/share/nginx/downloads/${domain}.tar.gz
+      #tar czf /usr/share/nginx/downloads/${domain}.tar.gz ./${domain}
+      #sh /root/.acme.sh/acme_action.sh
     fi
     alert $msg 
   fi
