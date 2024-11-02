@@ -67,4 +67,6 @@ register.sh
 template.cn.sh
 3、监控
 acme_alert.sh
+4、定时任务
+30 0 * * *  "/root/.acme.sh"/acme_alert.sh >> /tmp/alert.log 2>&1 &
 ```
